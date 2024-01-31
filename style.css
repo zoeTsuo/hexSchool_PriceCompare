@@ -1,0 +1,220 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+.inline-flex {
+  display: inline-flex;
+}
+body {
+  background: url(https://hexschool.github.io/js-filter/assets/bg.jpg);
+  background-size: cover;
+  height: 100vh;
+  font-family: "NotoSansCJKtc-Bold";
+  color: #2a2a2a;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+.wrap {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+.logo a {
+  display: block;
+  background: url(https://firebasestorage.googleapis.com/v0/b/hexschool-courses.appspot.com/o/course%2FJS%20%E5%89%8D%E7%AB%AF%E4%BF%AE%E7%B7%B4%E5%85%A8%E6%94%BB%E7%95%A5%2F1628942714013-logo%20%E6%94%B9.png?alt=media&token=583e78ed-6a6c-4660-9f0e-2f59f8eb78e2)
+    no-repeat;
+  width: 450px;
+  height: 105px;
+  text-indent: 101%;
+  overflow: hidden;
+  cursor: pointer;
+}
+@media (max-width: 767px) {
+  .logo a {
+    background: url(https://firebasestorage.googleapis.com/v0/b/hexschool-courses.appspot.com/o/course%2FJS%20%E5%89%8D%E7%AB%AF%E4%BF%AE%E7%B7%B4%E5%85%A8%E6%94%BB%E7%95%A5%2F1629001163643-logo-sm.png?alt=media&token=914f40fc-c143-4aaa-a1c3-fb0bdd17fa9c)
+      no-repeat;
+    width: 178px;
+    height: 50px;
+    margin: 1.25rem auto;
+  }
+}
+.main {
+  background: #fff;
+  border: 3px solid #e0cb615a;
+  padding: 2.5rem;
+  box-shadow: white 0px 0px 0px 0.225rem;
+  border-radius: 10px;
+}
+@media (max-width: 767px) {
+  .main {
+    padding: 0.75rem;
+  }
+}
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+.rounded-start {
+  border-radius: 5px 0 0 5px;
+}
+.rounded-end {
+  border-radius: 0 5px 5px 0;
+}
+
+.seach-group {
+  white-space: nowrap;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  font-size: 1rem;
+  & .crop-input {
+    width: 55%;
+    & label {
+      background: #899e39;      
+      color: #fff;
+      padding: 1rem 1rem;
+      width: 20%;
+      border: 2px #899e39 solid;
+    }
+    & input {
+      width: 75%;
+      border: 2px #899e39 solid;
+      padding: 1rem 1rem;
+      margin-left: -0.3125rem;
+      font-size: 1rem;
+      &::placeholder {        
+        color: #6d8a71;
+      }
+    }
+  }
+  & .search {
+    width: 15%;
+    color: #fff;
+    font-size: 1rem;
+    background: #899e39;
+    padding: 0.5rem 0.5rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 2px #899e39 solid;
+  }
+}
+@media (max-width: 767px) {
+  .seach-group {
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+    & .crop-input{
+      width: 100%;
+      margin-bottom: 0.5rem;
+    }
+    & .search{
+      width: 100%;
+    }
+  }
+}
+.button-group{
+  & button{
+    line-height: 1.5;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 1px 1px ; 
+    padding: 0.5rem 2.5rem;
+    color: #2a2a2a;
+    letter-spacing: 1px;
+    margin: 0 0.625rem 1.25rem 0;
+    &:hover {
+      background: #f8d45a;
+    }
+    &.active {
+      background: #f8d45a;
+    }
+  }
+}
+.sort-content{
+  padding: 0.5rem 0;
+  & p{
+     font-weight: 900;
+     font-size: 1.2rem; 
+  }
+}
+.show-keyword {
+  font-size: 18px;
+  letter-spacing: 1.12px;
+}
+.sort-select {
+  width: 125px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 0.5rem;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort-down" class="svg-inline--fa fa-sort-down fa-w-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="10 0 320 900"><path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path></svg>')
+    no-repeat;
+  background-position: 105px 5px;
+  border-radius: 0.25rem;
+}
+.show-table{
+  width: 100%;
+  border-collapse:collapse;
+  text-align: center;
+  & thead{
+    background: #f4f1ea;
+    font-size: 1rem;  
+    & th{
+      border-top: 2px solid black;
+      border-bottom: 2px solid black;
+      padding: 0.5rem 0.5rem;
+      & span{
+        padding-left: 0.5rem;
+      }
+    }
+  }
+  & tbody{
+    & tr td{
+      font-size: 1rem;  
+      border-bottom: #dee2e6 2px solid;
+      padding: 0.5rem 0.5rem;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .show-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+.mobile-select{
+  display: none;
+}
+@media (max-width: 767px) {
+  .mobile-select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="sort-down" class="svg-inline--fa fa-sort-down fa-w-2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="10 0 320 800"><path fill="currentColor" d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41z"></path></svg>')
+      no-repeat;
+    background-position: 60px 3px;
+  }
+}
+.sort-advanced {
+  position: relative;
+}
+.fa-caret-up,
+.fa-caret-down {
+  position: absolute;
+}
+.fa-caret-up {
+  top: -2px;
+  right: -15px;
+}
+.fa-caret-down {
+  top: 9px;
+  right: -15px;
+}
