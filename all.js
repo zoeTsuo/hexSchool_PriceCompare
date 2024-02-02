@@ -46,12 +46,13 @@ btn_grp.addEventListener('click', function(e){
 })
 //input_filter
 search_btn.addEventListener('click', function(e){
-    if (search_input.value == ""){
+    if (search_input.value.trim() == ""){
         alert("請輸入作物名稱！");
+        search_input.value = "";
         return;
     }
     disableAllBtn();
-    let prodName = search_input.value;
+    let prodName = search_input.value.trim();
     let nameFileter = dataChk.filter(function(name_itm){
         return name_itm.作物名稱.match(prodName);
     })
